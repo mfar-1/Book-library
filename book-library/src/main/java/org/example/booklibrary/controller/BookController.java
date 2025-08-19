@@ -31,7 +31,7 @@ public class BookController {
         return bookService.findById(id);
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public Book update(@PathVariable Integer id, @Valid @RequestBody CreateBookDto dto) {
         return bookService.update(id, dto);
     }

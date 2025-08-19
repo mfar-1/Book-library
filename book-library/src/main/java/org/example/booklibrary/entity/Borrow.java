@@ -1,12 +1,18 @@
 package org.example.booklibrary.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "borrows")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+
 public class Borrow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
